@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(){
+    int num1, num2;
+    char op;
+
+    printf("Enter the first number : ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number : ");
+    scanf("%d", &num2);
+    
+    printf("Enter the operator [+, -, *, /] : ");
+    scanf("%c", &op);
+
+    printf(" ");
+
+    switch (op) {
+        case '+' :
+            printf("%d + %d = ", num1 + num2);
+            break;
+        case '-' :
+            printf("%d - %d = ", num1 - num2);
+            break;
+        case '*' :
+            printf("%d * %d = ", num1 * num2);
+            break;
+        case '/' :
+            printf("%d / %d = ", num1 / num2);
+            break;
+    }
+    return 0;
+}
