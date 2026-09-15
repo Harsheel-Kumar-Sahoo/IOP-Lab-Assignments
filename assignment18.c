@@ -1,39 +1,16 @@
 #include <stdio.h>
 
-int main(){
-    int a, b, c;
+int main()
+{
+    int a, b, c, max;
 
-    printf("Enter the first number : ");
-    scanf("%d", &a);
-    
-    printf("Enter the second number : ");
-    scanf("%d", &b);
-    
-    printf("Enter the third number : ");
-    scanf("%d", &c);
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
 
-    // if (a >= b && a >= c) {
-    //     printf("Max : %d", a);
-    // } else if (b >= a && b >= c) {
-    //     printf("Max : %d", b);
-    // } else {
-    //     printf("Max : %d", c);
-    // }
+    max = (a > b) ? a : b;
+    max = (max > c) ? max : c;
 
-    if (a >= b) {
-        if (a >= c) {
-            printf("Max : %d", a);
-        }
-    } else if (b >= a) {
-        if (b >= c) {
-            printf("Max : %d", b);
-        }
-    } else if (c >= a){
-        if (c >= b) {
-            printf("Max : %d", c);
-        }
-    }
+    printf("Maximum = %d", max);
 
-    
     return 0;
 }
